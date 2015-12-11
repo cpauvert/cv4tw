@@ -2,7 +2,6 @@
 \newlength{\cvdatewidth}\setlength{\cvdatewidth}{5cm}
 \newlength{\cvskillleftwidth}\setlength{\cvskillleftwidth}{2cm}
 \newlength{\cvskillrightwidth}\setlength{\cvskillrightwidth}{5cm}
-%\newlength{\cvtitlewidth}\setlength{\cvtitlewidth}{8cm}
 \newlength{\cvtitlewidth}\setlength{\cvtitlewidth}{11cm}
 \newlength{\cvnamewidth}\setlength{\cvnamewidth}{8cm}
 \newlength{\cvpicturewidth}\setlength{\cvpicturewidth}{2.4cm}
@@ -103,4 +102,26 @@
 	{ \end{tabular}\\[2em] \end{minipage} }
 
 \hypersetup{urlbordercolor={0.9 0.9 0.9},pdfborder={0 0 0.4}}
+
+%
+% CV References
+%
+\newlength{\cvreferencewidth}\setlength{\cvreferencewidth}{0.33\textwidth}
+
+%\cvreference{Name}{Position}{ToMe}{Phone}{Mail}
+%              1       2       3      4     5
+\newcommand*{\cvreference}[5]{
+	\vspace{-0.5em}
+	\begin{minipage}[t]{\cvreferencewidth}
+	\begin{center}
+		\begin{footnotesize}
+		{\mystyle[cvstorytitle] #1}{\mystyle[cvstoryshort],~#2} \\
+			{\mystyle[cvstorydescription] #3}\\
+		{\mystyle[cellphonebullet]  \footnotesize \begin{tabular}[t]{>{\mystyle[cellphone]\footnotesize}l}#4\end{tabular} \\}
+		{\mystyle[emailbullet]  \footnotesize \begin{tabular}[t]{>{\mystyle[email]\footnotesize}l}\href{mailto:#5}{#5}\end{tabular} }
+		\end{footnotesize}
+	\end{center}
+	\end{minipage}
+}
+
 \endinput
