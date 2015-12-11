@@ -108,14 +108,14 @@
 %
 \newlength{\cvreferencewidth}\setlength{\cvreferencewidth}{0.33\textwidth}
 
-%\cvreference{Name}{Position}{ToMe}{Phone}{Mail}
-%              1       2       3      4     5
-\newcommand*{\cvreference}[5]{
+%\cvreference{Name}{Position}{ToMe}{Phone}{Mail}{WebSite}
+%              1       2       3      4     5      6
+\newcommand*{\cvreference}[6]{
 	\vspace{-0.5em}
 	\begin{minipage}[t]{\cvreferencewidth}
 	\begin{center}
 		\begin{footnotesize}
-		{\mystyle[cvstorytitle] #1}{\mystyle[cvstoryshort],~#2} \\
+			{\mystyle[cvstorytitle] \href{#6}{#1}}{\mystyle[cvstoryshort],~#2} \\
 			{\mystyle[cvstorydescription] #3}\\
 		{\mystyle[cellphonebullet]  \footnotesize \begin{tabular}[t]{>{\mystyle[cellphone]\footnotesize}l}#4\end{tabular} \\}
 		{\mystyle[emailbullet]  \footnotesize \begin{tabular}[t]{>{\mystyle[email]\footnotesize}l}\href{mailto:#5}{#5}\end{tabular} }
