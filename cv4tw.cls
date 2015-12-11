@@ -11,7 +11,7 @@
 \RequirePackage{xstring}
 \RequirePackage{fancyhdr}
 \RequirePackage{lastpage}
-\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{hyperref}
 %\RequirePackage{refcount}
 
 %
