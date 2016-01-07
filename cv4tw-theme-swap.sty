@@ -101,7 +101,10 @@
 	\begin{tabular}[t]{@{}>{\mystyle[cvskillname]\hfill}p{.7\cvleftwidth}@{}>{\mystyle[cvskilldescription]}p{\cvrightwidth}@{}} } 
 	{ \end{tabular}\\[2em] \end{minipage} }
 
-\hypersetup{urlbordercolor={0.9 0.9 0.9},pdfborder={0 0 0.4}}
+% Show discreet url border
+\hypersetup{ urlbordercolor={0.9 0.9 0.9}, pdfborder={0 0 0.4}}
+
+
 
 %
 % CV References
@@ -124,4 +127,14 @@
 	\end{minipage}
 }
 
+% Set PDF properties
+\AtEndPreamble{
+	\hypersetup{
+	    pdfcreator    = {\LaTeX{} with 'cv4tw' package},
+	    pdfauthor     = {\@cvfirstname~\@cvlastname},
+	    pdftitle      = {\@cvfirstname~\@cvlastname -- \@cvtitle},
+	    pdfsubject    = {\@cvfirstname~\@cvlastname's resum\'{e} },
+	    pdfkeywords   = {\@cvfirstname~\@cvlastname, curriculum vitae, resum\'{e},CV}
+    }
+}
 \endinput
