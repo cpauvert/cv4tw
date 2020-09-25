@@ -23,7 +23,7 @@
 \renewcommand*{\maketitle}{
 	\@ifundefined{@cvpicture}{}{ \begin{minipage}[m]{\cvpicturewidth} \fboxsep=1mm\fboxrule=0.05pt \fcolorbox{black}{white}{ \includegraphics[keepaspectratio=true,width=\cvpicturewidth]{\@cvpicture} }\end{minipage}\hspace{5ex}}
 	\begin{minipage}[m]{\cvnamewidth}
-		\mystyle[name]\@cvfirstname ~ \@cvlastname 
+	\mystyle[name]\@ifundefined{@cvacademictitle}{}{\@cvacademictitle~}\@cvfirstname~\@cvlastname
 		%\mystyle[name]\@cvfirstname ~ \@cvlastname ~ \faAngleRight
 	\end{minipage}
 	\hfill
